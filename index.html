@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-br" class="">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FocusTimer-Plus</title>
+
+        <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script src="./src/main.js" type="module" defer></script>   
+    </head>
+    <body>
+        <main class="container">
+            <div id="app-light-mode">
+                <button id="toggle-mode">
+                    <span class="sr-only"> Ativar / Desativar Light Mode</span>
+                    <i class="ph-bold ph-sun"></i>
+                    <i class="ph-bold ph-moon"></i>
+                </button>
+            </div>
+            <div class="app-wrapper">
+                <div id="app-timer">
+                    <section id="timer" class="flex">
+                        <span data-action="editMinutes" id="minutes">00</span>
+                        <span>:</span>
+                        <span data-action="editSeconds" id="seconds">00</span>
+                    </section>
+            
+                    <section id="controls" class="flex">
+                        <button data-action="toggleRunning" class="ph-bold ph-play-circle"><span class="sr-only">Iniciar contador</span></button>
+                        <button data-action="toggleRunning" class="ph-bold ph-pause-circle"><span class="sr-only">Pausar contador</span></button>
+                        <button data-action="reset" class="ph-bold ph-stop-circle secondary"><span class="sr-only">Reiniciar contador</span></button>
+    
+                        <button data-action="addFiveMinutes" class="ph-bold ph-plus-circle"><span class="sr-only">Aumentar 5min.</span></button>
+                        <button data-action="removeFiveMinutes" class="ph-bold ph-minus-circle"><span class="sr-only">Diminuir 5min.</span></button>
+                    </section>
+                </div>
+    
+                <div id="music-selection">
+                    <section id="sounds" class="grid-sounds">
+                        <button data-action="soundTree" class="ph-bold ph-tree"><span class="sr-only">Iniciar contador</span></button>
+                        <button data-action="soundRain" class="ph-bold ph-cloud-rain"><span class="sr-only">Pausar contador</span></button>
+                        <button data-action="soundStorefront" class="ph-bold ph-storefront"><span class="sr-only">Ajustar contador</span></button>
+                        <button data-action="soundCampfire" class="ph-bold ph-campfire"><span class="sr-only">Reiniciar contador</span></button>
+                    </section>
+                    
+                </div>
+            </div>
+            
+
+        </main>
+    </body>
+</html>
